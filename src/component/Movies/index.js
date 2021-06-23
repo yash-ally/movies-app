@@ -71,10 +71,21 @@ class Parent extends React.Component{
                     (this.state.movieList.length && this.state.movieList.map(item =>
                     (
                         <div className="movienames">
-                            <img src={item.Poster}/>
-                            <h3>{item.Title}</h3>
-                            <h4>{item.Year}</h4>
+                            <div className="imgcontainer">
+                                <img src={item.Poster}/>
+                                
+                            </div>
+                            <div className="overlay">
+                                    <div className="details">
+                                    <h3>{item.Title}</h3>
+                                    <h4>{item.Year}</h4>
+                                    <h3>ImDb: {item.imdbId}</h3>
+                                    </div>
+                                </div>
+                                    
+                                
                         </div>
+                            
                     )))
                 }
                 
