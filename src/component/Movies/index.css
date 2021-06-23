@@ -85,9 +85,11 @@ a{
 .movienames:hover .overlay {
     opacity: 0.8;
     visibility: 1;
+    cursor: pointer;
   }
 
   .movienames:hover .details{
     opacity: 1;
     visibility: 10;
+    cursor: pointer;
   }
