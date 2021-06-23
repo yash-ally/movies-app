@@ -78,7 +78,7 @@ class Parent extends React.Component{
                             <div className="overlay">
                                     <div className="details">
                                     <h3>{item.Title}</h3>
-                                    <h4>{item.Year}</h4>
+                                    <h4>Releaased: {item.Year}</h4>
                                     <h3>ImDb: {item.imdbId}</h3>
                                     </div>
                                 </div>
