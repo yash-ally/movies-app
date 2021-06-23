@@ -61,7 +61,7 @@ class Parent extends React.Component{
                 </div>
                 
 
-                <a href="http://localhost:3000/">
+                <a href="https://yash-ally.github.io/movies-app/">
                     <h1 className="Title">Movies</h1>
                 </a>
                     
