@@ -3,36 +3,39 @@ import React from 'react'; //imr
 import 'bootstrap/dist/css/bootstrap.min.css'; //bootstrap 
 
 import Footer from './component/Footer'
-import PlacesGrid from './component/PlacesGrid'
 import Topbar from './component/Topbar'
 
-import Movie from './component/Movies'
+import Home from './component/Home'
+import About from './component/About'
+import Contact from './component/Contact'
+import Cart from './component/Cart'
+import PDP from './component/PDP'
+import Product_Details from './component/Product_Details'
 
-import Comp from './component/pureComp';
-
-import Counter from './component/useState'
-import Products from './component/Products';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 const App = () => {  //sfc
   return ( 
     <div>
 
+      
+
+      {/* <Products/> */}
+      <BrowserRouter>
       <Topbar />
+        <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact"  component={Contact} />
+            <Route path="/cart"  component={Cart} />
+            <Route path="/products" exact component={PDP} />
+            <Route path="/products/:id"  component={Product_Details} />
+            <Route component={()=><h1>404 Not Found</h1>}/>
+        </Switch>
+        <Footer />
+      </BrowserRouter>
 
-      <Products/>
-
-      {/* <Counter /> */}
-
-      {/* <Comp /> */}
-      {/* <h1>App Component</h1> */}
-
-      {/* <Movie /> */}
-
-      {/* 
-      <PlacesGrid 
-        value
-      />
-      <Footer /> */}
+      
     </div>
    );
 }
