@@ -1,0 +1,19 @@
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 2%;
+    width: 15%;
+}
+
+.card-body{
+    width: 100%;
+}
+
+.card-para {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
