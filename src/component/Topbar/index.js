@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Topbar = () => {
+  const path = process.env.PUBLIC_URL
     return ( 
       <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -13,17 +14,21 @@ const Topbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link to="../" className="nav-link">Home</Link>
+                  <Link to={`${path}/`} className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="../About" className="nav-link">About Us</Link>
+                  <Link to={`${path}/products`} className="nav-link">Products</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="../Contact" className="nav-link">Contact Us</Link>
+                  <Link to={`${path}/about`} className="nav-link">About Us</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="../Cart" className="nav-link">Cart</Link>
+                  <Link to={`${path}/contact`} className="nav-link">Contact Us</Link>
                 </li>
+                <li className="nav-item">
+                  <Link to={`${path}/cart`} className="nav-link">Cart</Link>
+                </li>
+                
               </ul>
             </div>
           </div>

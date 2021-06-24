@@ -15,21 +15,21 @@ import Product_Details from './component/Product_Details'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 const App = () => {  //sfc
+  const path = process.env.PUBLIC_URL
   return ( 
+    
     <div>
-
-      
 
       {/* <Products/> */}
       <BrowserRouter>
       <Topbar />
         <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact"  component={Contact} />
-            <Route path="/cart"  component={Cart} />
-            <Route path="/products" exact component={PDP} />
-            <Route path="/products/:id"  component={Product_Details} />
+            <Route path={`${path}/`} exact component={Home} />
+            <Route path={`${path}/about`} component={About} />
+            <Route path={`${path}/contact`}  component={Contact} />
+            <Route path={`${path}/cart`}  component={Cart} />
+            <Route path={`${path}/products`} exact component={PDP} />
+            <Route path={`${path}/products/:id`}  component={Product_Details} />
             <Route component={()=><h1>404 Not Found</h1>}/>
         </Switch>
         <Footer />
