@@ -1,3 +1,8 @@
+/* .prod_row{
+    margin-left: 5%;
+    margin-right: 5%;
+} */
+
 .card{
     display: flex;
     flex-wrap: wrap;
@@ -10,10 +15,14 @@
     width: 100%;
 }
 
-.card-para, .card-title {
+.card-para, .card-title{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+.card-title:hover{
+    color: black;
+}

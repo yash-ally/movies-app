@@ -16,7 +16,7 @@ const Cart = ({cart, clearCartProds, redirectHome}) => {
 
     return ( 
         <>
-        {redirectHome && <Redirect to="/"></Redirect>}
+        {redirectHome && <Redirect to="/products"></Redirect>}
         <h1>Your Cart has {cart.length} items</h1>
         {cart.length && cart.map(({name, preview, description, quantity, price})=>{
             <div class="card">

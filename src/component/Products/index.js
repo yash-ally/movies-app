@@ -111,42 +111,91 @@ const Products = (props) => {
         <hr />          
         <div class="d-flex flex-wrap">
         {props.products.length && props.products.map((item) =>{
-          const {name, preview, brand, id, description} = item;
+          const {name, preview, brand, id, description, price, isAccessory} = item;
           // let { name, preview, id, description } = item;
-          return (
-            <div class="card">
-          
-                <Link to={{
-                  pathname: `${path}/products/${id}`,   
-                  preview,
-                  name,
-                  descriptionName: description, // use props.location
-                }}
-                >
+          if(isAccessory == false)
+          { return (
+              // <div className="prod_row">
+                <>
+                <h2>Clothing:</h2>
+                  <div class="card">
+                    
+                      <Link to={{
+                        pathname: `${path}/products/${id}`,   
+                        preview,
+                        name,
+                        descriptionName: description, // use props.location
+                      }}
+                      >
 
-                <img src={item.preview} class="card-img-top" alt="..."/>
-                </Link>
-              
-                <div class="card-body" >
+                      <img src={item.preview} class="card-img-top" alt="..."/>
+                      </Link>
+                    
+                      <div class="card-body" >
 
-                <Link to={{
-                    pathname: `${path}/products/${id}`,
-                    preview,
-                    name,
-                    descriptionName: description, // use props.location
-                  }}
-                >
+                      <Link to={{
+                          pathname: `${path}/products/${id}`,
+                          preview,
+                          name,
+                          descriptionName: description, // use props.location
+                        }}
+                      >
 
-                <h2 class="card-title">{name}</h2>
-                </Link>
-                <h4 class="card-text">{brand}</h4>
-                <p class="card-para">{description}</p>
-                <a href="#" class="btn btn-primary" onClick={()=> props.addProduct(item)}>Add to Cart</a>
-                {/* <button onClick={() => setCart([...cart, item])}>Add TO Cart</button> */}
-                
-                </div>                  
-            </div>
-          );
+                      <h2 class="card-title">{name}</h2>
+                      </Link>
+                      <h4 class="card-text">{brand}</h4>
+                      <p class="card-para">{description}</p>
+                      <p class="card-para">{price}</p>
+                      <a href="#" class="btn btn-primary" onClick={()=> props.addProduct(item)}>Add to Cart</a>
+                      {/* <button onClick={() => setCart([...cart, item])}>Add TO Cart</button> */}
+                      
+                      </div>                  
+                  </div>
+                </>
+            );
+          }
+          else{
+            // <h2>Accessories</h2>
+            return (
+              // <div className="prod_row">
+              <>
+                <h2>Accessories:</h2>
+                <div class="card">
+                  
+                    <Link to={{
+                      pathname: `${path}/products/${id}`,   
+                      preview,
+                      name,
+                      descriptionName: description, // use props.location
+                    }}
+                    >
+
+                    <img src={item.preview} class="card-img-top" alt="..."/>
+                    </Link>
+                  
+                    <div class="card-body" >
+
+                    <Link to={{
+                        pathname: `${path}/products/${id}`,
+                        preview,
+                        name,
+                        descriptionName: description, // use props.location
+                      }}
+                    >
+
+                    <h2 class="card-title">{name}</h2>
+                    </Link>
+                    <h4 class="card-text">{brand}</h4>
+                    <p class="card-para">{description}</p>
+                    <p class="card-para">{price}</p>
+                    <a href="#" class="btn btn-primary" onClick={()=> props.addProduct(item)}>Add to Cart</a>
+                    {/* <button onClick={() => setCart([...cart, item])}>Add TO Cart</button> */}
+                    
+                    </div>                  
+                </div>
+              </>
+            );
+          }
         })}
                   
         </div>            

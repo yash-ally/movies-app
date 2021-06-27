@@ -7,9 +7,12 @@ import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { addToCart, getProducts } from "../../redux/actions";
 
+import "./index.css";
+
 const Details = (props) => {
     const [product, setProduct] = useState({});
     const { id }= useParams();
+    const [isActive, setisActive] = useState(false);
 
     const url = "https://5d76bf96515d1a0014085cf9.mockapi.io/product/";
 
@@ -19,12 +22,20 @@ const Details = (props) => {
         .catch((err) => alert(err));
     }, []);
 
+    const toggleClass = () => {
+        setisActive(!isActive);
+    };
+
+    // const changeClass = () =>{
+    //     className = "image_list active"
+    // }
+
     return ( 
         <>
             <h1>Product Id: {id}</h1>
             <hr/>
             <div className="row m-2">
-                <div className="col-6 p-4">
+                <div className="col-4 p-4">
                     <img src={product.preview} style={{width: "80%"}}/>
                 </div>
                 <div className="col-6 p-4">
@@ -33,10 +44,25 @@ const Details = (props) => {
                     
                     <h3>Description:</h3>
                     <p className="description">{product.description}</p>
-                    <h4 className="price">Price: Rs {product.price}</h4>
+                    <h4 className="price">Price: Rs <span id="price-tag">{product.price}</span></h4>
 
                     <h5>Preview Images:</h5>
-                    
+                    <div className="images">
+                        {product.photos !== undefined && product.photos.length && product.photos.slice(0, product.photos.length).map((item) => 
+                        <img className={isActive? "active_image" : "image_list"} onClick={toggleClass} src={item} width={100} 
+                            // onClick={className = "active"}
+                            // className={isActive? "col-4 p-4 active_image" : "image_list"} onClick={toggleClass}
+                        />
+                        )}
+                    </div>
+
+                    {/* <button
+                        onClick={() => {
+                            props.history.push("/contact");
+                        }}
+                        >
+                        CLick to Redirect to back
+                        </button> */}
 
                     <button onClick={()=> props.addProduct(product)}>Add to Cart</button>
                 </div>

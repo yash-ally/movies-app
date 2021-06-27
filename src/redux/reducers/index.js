@@ -25,6 +25,7 @@ export const productReducer = (state = initialState, { type, payload }) => {
             else{
                 updateProducts = [...cart, {...payload, quantity:1}];
             }
+         
             return {...state, cart: updateProducts};
         }
 
