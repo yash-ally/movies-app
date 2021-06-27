@@ -48,6 +48,7 @@ class Parent extends React.Component{
 
 
     render(){
+        const path = process.env.PUBLIC_URL
         return(
             <div >
 

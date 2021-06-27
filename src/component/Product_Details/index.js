@@ -4,7 +4,10 @@ import axios from 'axios';
 
 import { useParams } from "react-router-dom";
 
-const Details = () => {
+import { connect } from "react-redux";
+import { addToCart, getProducts } from "../../redux/actions";
+
+const Details = (props) => {
     const [product, setProduct] = useState({});
     const { id }= useParams();
 
@@ -35,12 +38,21 @@ const Details = () => {
                     <h5>Preview Images:</h5>
                     
 
-                    <button>Add to Cart</button>
+                    <button onClick={()=> props.addProduct(product)}>Add to Cart</button>
                 </div>
             </div>
             
         </>
      );
 }
+
+const mapStateToProps = (store) => ({
+    cart: store.cart,
+  });
+
+  const mapDispatchToProps = (dispatch) => ({
+    sendProducts: (payload) => dispatch(getProducts(payload)),
+    addProduct: (payload) => dispatch(addToCart(payload)),
+  });
  
-export default Details;
+export default connect(mapStateToProps, mapDispatchToProps)(Details);

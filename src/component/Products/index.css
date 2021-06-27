@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-.card-para {
+.card-para, .card-title {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
