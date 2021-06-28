@@ -109,7 +109,7 @@ const Products = (props) => {
   return (
     <>
       <hr />
-      <h2>Clothing:</h2>
+      <h2>Clothing for Men and Women:</h2>
 
       <div class="d-flex flex-wrap">
         {props.products.length && props.products.map((item) => {
@@ -160,7 +160,7 @@ const Products = (props) => {
 
       </div>
 
-      <h2>Accessories:</h2>
+      <h2>Accessories for Men and Women:</h2>
 
       <div class="d-flex flex-wrap">
         {props.products.length && props.products.map((item) => {

@@ -13,6 +13,7 @@ import PDP from './component/PDP'
 import Product_Details from './component/Product_Details'
 import SignIn from './component/SignIn'
 import SignUp from './component/SignUp'
+import OrderPlaced from './component/orderPlaced'
 import Movies from './component/Movies'
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
@@ -36,6 +37,7 @@ const App = () => {  //sfc
             <Route path={`${path}/movies`} exact component={Movies} />
             <Route path={`${path}/signin`} exact component={SignIn} />
             <Route path={`${path}/signup`} exact component={SignUp} />
+            <Route path={`${path}/orderPlaced`} exact component={OrderPlaced} />
             <Route component={()=><h1>404 Not Found</h1>}/>
         </Switch>
         <Footer />
