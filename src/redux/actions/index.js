@@ -22,6 +22,8 @@ export const clearCart = (payload) => {
     }
 }
 
+
+
 //   export const clearCart = (payload) => (dispatch) => {
 //     return axios("clear") .then((res) => {
 //         dispatch({

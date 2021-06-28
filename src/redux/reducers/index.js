@@ -32,6 +32,9 @@ export const productReducer = (state = initialState, { type, payload }) => {
         case actionTypes.CLEAR_CART:
             return {...state, cart: [], redirectHome: true}
 
+        case "CHANGE_REDIRECT":
+            return {...state, redirectHome:false}
+
 
         default:
             return state;

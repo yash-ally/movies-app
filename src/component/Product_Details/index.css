@@ -1,8 +1,9 @@
 .images{
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 .image_list{

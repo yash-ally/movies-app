@@ -14,16 +14,18 @@ const Cart = ({cart, clearCartProds, redirectHome}) => {
         clearCartProds();
     }
 
+    const path = process.env.PUBLIC_URL;
+
     return ( 
         <>
-        {redirectHome && <Redirect to="/products"></Redirect>}
+        {redirectHome && <Redirect to={`${path}/`}></Redirect>}
         <h1>Your Cart has {cart.length} items</h1>
-        {cart.length && cart.map(({name, preview, description, quantity, price})=>{
+        {cart.length && cart.map((item)=>{          //{name, preview, description, quantity, price}
             <div class="card">
             <div class="card-body">
               <h5 class="card-title">
-                {preview} {name} Rs {price} X {quantity} ={" "}
-                {Number(price) * Number(quantity)}
+                {item.preview} {item.name} Rs {item.price} X {item.quantity} ={" "}
+                {Number(item.price) * Number(item.quantity)}
               </h5>
             </div>
           </div>

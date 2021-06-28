@@ -12,7 +12,7 @@ import "./index.css";
 const Details = (props) => {
     const [product, setProduct] = useState({});
     const { id }= useParams();
-    const [isActive, setisActive] = useState(false);
+    const [isActive, setisActive] = useState(0);
 
     const url = "https://5d76bf96515d1a0014085cf9.mockapi.io/product/";
 
@@ -22,8 +22,8 @@ const Details = (props) => {
         .catch((err) => alert(err));
     }, []);
 
-    const toggleClass = () => {
-        setisActive(!isActive);
+    const toggleClass = (index) => {
+        setisActive(index);
     };
 
     // const changeClass = () =>{
@@ -36,7 +36,7 @@ const Details = (props) => {
             <hr/>
             <div className="row m-2">
                 <div className="col-4 p-4">
-                    <img src={product.preview} style={{width: "80%"}}/>
+                    <img src={product.photos[isActive]} style={{width: "80%"}}/>
                 </div>
                 <div className="col-6 p-4">
                     <h1 className="title">{product.name}</h1>
@@ -48,8 +48,8 @@ const Details = (props) => {
 
                     <h5>Preview Images:</h5>
                     <div className="images">
-                        {product.photos !== undefined && product.photos.length && product.photos.slice(0, product.photos.length).map((item) => 
-                        <img className={isActive? "active_image" : "image_list"} onClick={toggleClass} src={item} width={100} 
+                        {product.photos !== undefined && product.photos.length && product.photos.slice(0, product.photos.length).map((item, index) => 
+                        <img className={isActive === index? "active_image" : "image_list"} onClick={() => toggleClass(index)} src={item} width={100} 
                             // onClick={className = "active"}
                             // className={isActive? "col-4 p-4 active_image" : "image_list"} onClick={toggleClass}
                         />
@@ -71,6 +71,7 @@ const Details = (props) => {
         </>
      );
 }
+
 
 const mapStateToProps = (store) => ({
     cart: store.cart,
