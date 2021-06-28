@@ -33,13 +33,6 @@ const Home = () => {
                     </div>
                 
                 
-                
-                {/* <ul className="slick-dots" role="tablist">
-                    <li className="" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 4" tabindex="-1">1</button></li>
-                    <li role="presentation" className=""><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 4" tabindex="-1">2</button></li>
-                    <li role="presentation" className=""><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 4" tabindex="-1">3</button></li>
-                    <li role="presentation" className="slick-active"><button type="button" role="tab" id="slick-slide-control03" aria-controls="slick-slide03" aria-label="4 of 4" tabindex="0" aria-selected="true">4</button></li>
-                </ul> */}
             </section>
 
             <Products />
