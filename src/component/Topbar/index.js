@@ -34,6 +34,9 @@ const Topbar = ( {cart, user} ) => {
                   <Link to={`${path}/movies`} className="nav-link">Movies</Link>
                 </li>
                 <li className="nav-item">
+                  <Link to={`${path}/adminPanel`} className="nav-link">Admin Panel</Link>
+                </li>
+                <li className="nav-item">
                   <Link to={`${path}/signin`} className="nav-link">SignIn</Link>
                 </li>
                 <li className="nav-item">
