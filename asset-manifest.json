@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/movies-app/static/css/main.84b178e1.chunk.css",
-    "main.js": "/movies-app/static/js/main.dd62a4ba.chunk.js",
-    "main.js.map": "/movies-app/static/js/main.dd62a4ba.chunk.js.map",
-    "runtime-main.js": "/movies-app/static/js/runtime-main.0c9341ea.js",
-    "runtime-main.js.map": "/movies-app/static/js/runtime-main.0c9341ea.js.map",
+    "main.css": "/movies-app/static/css/main.d7387ccc.chunk.css",
+    "main.js": "/movies-app/static/js/main.9b8b724f.chunk.js",
+    "main.js.map": "/movies-app/static/js/main.9b8b724f.chunk.js.map",
+    "runtime-main.js": "/movies-app/static/js/runtime-main.1ed9bdfa.js",
+    "runtime-main.js.map": "/movies-app/static/js/runtime-main.1ed9bdfa.js.map",
     "static/css/2.d45d6843.chunk.css": "/movies-app/static/css/2.d45d6843.chunk.css",
-    "static/js/2.5fd9bbfb.chunk.js": "/movies-app/static/js/2.5fd9bbfb.chunk.js",
-    "static/js/2.5fd9bbfb.chunk.js.map": "/movies-app/static/js/2.5fd9bbfb.chunk.js.map",
-    "static/js/3.43845202.chunk.js": "/movies-app/static/js/3.43845202.chunk.js",
-    "static/js/3.43845202.chunk.js.map": "/movies-app/static/js/3.43845202.chunk.js.map",
+    "static/js/2.082905ef.chunk.js": "/movies-app/static/js/2.082905ef.chunk.js",
+    "static/js/2.082905ef.chunk.js.map": "/movies-app/static/js/2.082905ef.chunk.js.map",
+    "static/js/3.2777adc7.chunk.js": "/movies-app/static/js/3.2777adc7.chunk.js",
+    "static/js/3.2777adc7.chunk.js.map": "/movies-app/static/js/3.2777adc7.chunk.js.map",
     "index.html": "/movies-app/index.html",
     "static/css/2.d45d6843.chunk.css.map": "/movies-app/static/css/2.d45d6843.chunk.css.map",
-    "static/css/main.84b178e1.chunk.css.map": "/movies-app/static/css/main.84b178e1.chunk.css.map",
-    "static/js/2.5fd9bbfb.chunk.js.LICENSE.txt": "/movies-app/static/js/2.5fd9bbfb.chunk.js.LICENSE.txt"
+    "static/css/main.d7387ccc.chunk.css.map": "/movies-app/static/css/main.d7387ccc.chunk.css.map",
+    "static/js/2.082905ef.chunk.js.LICENSE.txt": "/movies-app/static/js/2.082905ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c9341ea.js",
+    "static/js/runtime-main.1ed9bdfa.js",
     "static/css/2.d45d6843.chunk.css",
-    "static/js/2.5fd9bbfb.chunk.js",
-    "static/css/main.84b178e1.chunk.css",
-    "static/js/main.dd62a4ba.chunk.js"
+    "static/js/2.082905ef.chunk.js",
+    "static/css/main.d7387ccc.chunk.css",
+    "static/js/main.9b8b724f.chunk.js"
   ]
 }
