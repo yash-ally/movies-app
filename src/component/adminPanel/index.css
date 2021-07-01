@@ -206,3 +206,8 @@ td {
 .active td {
   color: black;
 }
+
+img{
+  width: 60px !important;
+  height: 20px !important;
+}
